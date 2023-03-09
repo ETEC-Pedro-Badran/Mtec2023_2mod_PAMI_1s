@@ -7,12 +7,27 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("App Básico")),
-      body: Center(
-        child: Icon(
-          Icons.pedal_bike,
-          size: 120,
-          shadows: kElevationToShadow[3],
-        ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.pedal_bike,
+                size: 120,
+                shadows: kElevationToShadow[3],
+              ),
+              Text("Tenha um ótimo dia!"),
+              ElevatedButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("Muito obrigado!")));
+                  },
+                  child: Text("Agradecer!"))
+            ],
+          ),
+        ],
       ),
     );
   }
