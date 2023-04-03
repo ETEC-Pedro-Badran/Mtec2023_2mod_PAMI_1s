@@ -5,6 +5,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(children: [Image.asset(width: 100, "imagens/logo.png")]),
+    );
   }
 }
