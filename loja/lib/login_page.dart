@@ -11,6 +11,13 @@ class LoginPage extends StatelessWidget {
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Image.asset(width: 100, "imagens/logo.png"),
         LoginForm(),
+        ElevatedButton(onPressed: () {}, child: Text("Entrar")),
+        Text("Ou"),
+        TextButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed("/registro");
+            },
+            child: Text("Registrar-se")),
       ]),
     );
   }
