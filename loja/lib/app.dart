@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
 import 'login_page.dart';
 import 'registro_page.dart';
 
@@ -13,7 +14,8 @@ class App extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
-        "/registro": (context) => RegistroPage()
+        "/registro": (context) => RegistroPage(),
+        '/home': (context) => HomeScreen()
       },
     );
   }
